@@ -1,0 +1,9 @@
+export default interface Person {
+    firstName: string,
+    middleName?: string,
+    lastName: string,
+    phone?: string,
+    eMail?: string
+};
+
+    

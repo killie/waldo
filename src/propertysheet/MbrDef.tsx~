@@ -1,0 +1,9 @@
+import SelectOption from "./SelectOption";
+
+export default interface MbrDef {
+    typeName?: string;
+    name: string;
+    label?: string;
+    options?: SelectOption[];
+};
+

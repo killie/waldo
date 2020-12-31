@@ -1,0 +1,29 @@
+import React from 'react';
+import Person from "./Person";
+import {MbrDef, createDef} from "./../propertysheet/MbrDef";
+import {PropertySheet} from "./../propertysheet/PropertySheet";
+
+interface Props {
+    person: Person
+}
+
+const PersonDetails: React.FC<Props> = (props) => {
+    console.log("hey", props);
+
+    if (props.person === null) {
+        return (
+                <div></div>
+        );
+    }
+
+    const hide: string[] = ["id"];
+    const fields: MbrDef[] = createDef(props.person, {hide: hide});
+    
+    return (
+            <div className="props">
+            <PropertySheet fields={fields} data={props.person} />
+            </div>
+    );
+};
+
+export default PersonDetails;

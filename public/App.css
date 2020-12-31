@@ -1,0 +1,40 @@
+
+.props {
+}
+
+.props .fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.props .fields div {
+    margin-top: 10px;
+}
+
+.props .fields div span {
+    min-width: 150px;
+    display: inline-block;
+    text-align: left;
+}
+
+.person-details {
+    margin: 10px;
+}
+
+table.person-list {
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+table.person-list, table.person-list th, table.person-list td {
+    border: 1px solid gray;
+}
+
+table.person-list th, table.person-list td {
+    padding: 4px 8px;
+}
+
+table.person-list tbody tr:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
