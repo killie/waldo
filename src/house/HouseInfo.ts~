@@ -1,9 +1,0 @@
-export default interface HouseInfo {
-    houseId: string,
-    personId: string,
-    buildYear?: number,
-    size?: number,
-    bedrooms?: number,
-    bathrooms?: number,
-    notes: string
-};

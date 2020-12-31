@@ -1,5 +1,0 @@
-export default utils: object = {
-    caps: (text: string): string => {
-        return "CAPS";
-    }
-};
