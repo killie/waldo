@@ -24,3 +24,5 @@ yarn-error.log*
 
 # Emacs files
 **/*.*~
+
+.eslintcache
