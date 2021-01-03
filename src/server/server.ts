@@ -1,4 +1,5 @@
 import Person from "./../person/Person";
+import House from "./../house/House";
 
 const express = require('express');
 const app = express();
@@ -20,6 +21,15 @@ people.push({
     lastName: "Jones",
     phone: "123-231",
     eMail: ""
+});
+
+const houses: House[] = [];
+houses.push({
+    id: "h1",
+    address1: "Highway street 22",
+    address2: "Crest hilltop",
+    postNo: "123",
+    city: "Johnsonville"
 });
 
 app.get("/hello", (req: any, res: any) => {

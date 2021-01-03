@@ -3,11 +3,14 @@ import PersonList from "./person/PersonList";
 import PersonDetails from "./person/PersonDetails";
 import Person from "./person/Person";
 
+import {TableDef, ColDef, RowDef, CellDef} from "./propertysheet/TableDef";
+import Table from "./propertysheet/Table";
+
 class App extends React.Component<AppProps, AppState> {
 
     constructor(props: AppProps) {
         super(props);
-        this.state = {
+	this.state = {
             people: [],
             person: null
         };
@@ -29,6 +32,25 @@ class App extends React.Component<AppProps, AppState> {
             this.setState({person: persons[0]});
         }
     }
+
+    getTable = () => {
+	const tableDef: TableDef = {
+	    cols: [{title: "x1"}, {title: "x2"}, {title: "y"}],
+	    rows: [{
+		cells: [
+		    {rowIndex: 0, colIndex: 0, data: "0"},
+		    {rowIndex: 0, colIndex: 1, data: "1"},
+		    {rowIndex: 0, colIndex: 2, data: "2"}
+		]}, {
+		    cells: [
+			{rowIndex: 1, colIndex: 0, data: "12"},
+			{rowIndex: 1, colIndex: 1, data: "22"},
+			{rowIndex: 1, colIndex: 2, data: "32"}
+		    ]}
+		  ]
+	};
+	return tableDef;
+    }
     
     // Form with post command så visning ikke henger sammen med noe mer.
     // Må wrappe mbrDef med data (value, unit, etc)...
@@ -46,6 +68,7 @@ class App extends React.Component<AppProps, AppState> {
                  <PersonDetails person={this.state.person} />
                  </div>
                 }
+		<Table tableDef={this.getTable()} />
                 </div>
         );
     }

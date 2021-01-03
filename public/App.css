@@ -38,3 +38,38 @@ table.person-list tbody tr:hover {
     cursor: pointer;
     background-color: lightgray;
 }
+
+.table-component {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.table-component .header {
+    font-weight: 600;
+}
+
+.table-component .header > div {
+    padding: 0 2px;
+    width: 136px;
+}
+
+.table-component > div {
+    display: flex;
+}
+
+.table-component > div > div {
+    width: 140px;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.table-component > div > div > input {
+    border: 0;
+    padding: 0;
+    margin: 2px 5px;
+    width: 130px;
+}
+
+.table-component > div > div > input:focus {
+    outline: none;
+}

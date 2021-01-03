@@ -18,7 +18,8 @@ const TextField: React.FC<Props> = (props) => {
     return (
         <div>
 	        <span>{props.mbrDef.label}</span>
-	        <input type="text" name={props.mbrDef.name} className="text-field" value={getValue(props.mbrDef.name)} />
+	    <input type="text" name={props.mbrDef.name} className="text-field"
+	defaultValue={getValue(props.mbrDef.name)} />
 	    </div>
     );
 };
